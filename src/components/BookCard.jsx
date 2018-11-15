@@ -10,10 +10,18 @@ const BookCard = props => {
 
   return (
     <div className="book-card">
-      <img src={imageLink} alt="book cover" />
-      <h1 className="book-title">{title}</h1>
-      <h3 className="book-author">{authors}</h3>
-      <p className="book-description">{description}</p>
+      <div className="book-card-image">
+        <img src={imageLink} alt="book cover" />
+      </div>
+      <div className="book-card-title">
+        <h1 className="book-title">{title}</h1>
+      </div>
+      <div className="book-card-author">
+        <h3 className="book-author">{authors}</h3>
+      </div>
+      <div className="book-card-description">
+        <p className="book-description">{description.slice(0, 140) + "..."}</p>
+      </div>
     </div>
   );
 };

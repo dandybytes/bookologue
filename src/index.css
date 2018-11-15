@@ -43,12 +43,6 @@ body {
   color: white;
 }
 
-.main {
-  color: teal;
-  font-weight: 600;
-  text-align: justify;
-}
-
 .footer {
   text-align: center;
   padding: 1vh;
@@ -58,18 +52,58 @@ body {
 
 .book-collection {
   min-width: 15rem;
-  width: 60vw;
+  width: 1200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: auto;
-  border: 1px dashed #ccc;
+  /* border: 1px dashed #ccc; */
+  padding: 20px;
 }
 
 .book-card {
-  min-width: 3rem;
-  width: 23%;
+  width: 250px;
+  height: 450px;
+  margin: 10px;
+  /* border: 1px dotted #888; */
+  padding: 20px 10px;
+  background-color: white;
   text-align: center;
-  margin-top: 2rem;
-  border: 1px dotted #888;
+}
+
+.book-card-image {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-card-title {
+  height: 75px;
+}
+
+.book-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: teal;
+}
+
+.book-card-author {
+  height: 60px;
+  margin: auto;
+}
+
+.book-author {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 300;
+  font-style: italic;
+  color: #777;
+}
+
+.book-description {
+  font-size: 0.75rem;
+  /* text-align: justify; */
+  margin: 15px;
+  color: #777;
 }
