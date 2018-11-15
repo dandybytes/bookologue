@@ -1,11 +1,11 @@
 import React from "react";
 import BookCard from "./BookCard";
 
-const BookCollection = props => {
+const BookCollection = ({ books }) => {
   return (
     <div className="book-collection">
-      {props.books.map(book => (
-        <BookCard />
+      {books.map(book => (
+        <BookCard key={book.id} bookInfo={book.volumeInfo} />
       ))}
     </div>
   );
