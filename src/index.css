@@ -19,12 +19,16 @@ body {
   font-size: 1.5rem;
   background-color: teal;
   padding: 0 5vw;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .logo {
   color: white;
   font-size: 2rem;
-  /* text-shadow: 0.2rem 0.2rem 0.8rem rgba(255, 255, 255, 0.5); */
+}
+
+.logo:hover {
+  text-shadow: 0.2rem 0.2rem 1.5rem rgba(0, 0, 0, 0.5);
 }
 
 .nav-ul {
@@ -33,14 +37,24 @@ body {
   list-style-type: none;
 }
 
-.nav-li {
+.nav-li-link {
   margin: 0;
   padding: 0.5rem 1rem;
-}
-
-.nav-li-link {
   text-decoration: none;
   color: white;
+  opacity: 0.8;
+}
+
+.nav-li-link:hover {
+  background-color: rgba(50, 50, 50, 0.1);
+  opacity: 1;
+}
+
+.nav-li-link-active {
+  /* background-color: rgba(50, 50, 50, 0.2); */
+  opacity: 1;
+  font-weight: bold;
+  color: rgb(220, 220, 100);
 }
 
 .footer {
@@ -48,6 +62,7 @@ body {
   padding: 1vh;
   background-color: teal;
   color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .book-collection {
@@ -69,6 +84,10 @@ body {
   padding: 20px 10px;
   background-color: white;
   text-align: center;
+}
+
+.book-card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .book-card-image {

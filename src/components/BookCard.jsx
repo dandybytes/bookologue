@@ -1,7 +1,6 @@
 import React from "react";
 
 const BookCard = props => {
-  console.log(props);
   const title = props.bookInfo.title || "Book Title";
   const authors = props.bookInfo.authors || "author unknown";
   const imageLink =
