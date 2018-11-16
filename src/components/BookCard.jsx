@@ -5,8 +5,16 @@ const BookCard = props => {
   const authors = props.bookInfo.authors || "author unknown";
   const imageLink =
     props.bookInfo.imageLinks.thumbnail || "https://via.placeholder.com/200";
-  const description = props.bookInfo.description || "";
-
+  let description = "";
+  if (!props.bookInfo.description) {
+    description = "...";
+  } else if (props.bookInfo.description.length > 140) {
+    const buffer = props.bookInfo.description.split(" ");
+    while (description.length + buffer[0].length < 140) {
+      description += buffer.shift() + " ";
+    }
+    description += "...";
+  }
   return (
     <div className="book-card">
       <div className="book-card-image">
@@ -19,7 +27,7 @@ const BookCard = props => {
         <h3 className="book-author">{authors}</h3>
       </div>
       <div className="book-card-description">
-        <p className="book-description">{description.slice(0, 140) + "..."}</p>
+        <p className="book-description">{description}</p>
       </div>
     </div>
   );
