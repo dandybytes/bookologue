@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import BookCollection from "./BookCollection";
+import LoadingSpinner from "./LoadingSpinner";
 
 class Home extends Component {
   state = {
+    isLoading: true,
     books: [],
     maxResultsFromAPI: 40, // default max results: 10, max allowed: 40
     maxBooksPerPage: 12
@@ -17,7 +19,7 @@ class Home extends Component {
         "&maxResults=" + this.state.maxBooksPerPage}`
     )
       .then(res => res.json())
-      .then(res => this.setState({ books: res.items }))
+      .then(res => this.setState({ books: res.items, isLoading: false }))
       .catch(e => console.error(e));
   };
   componentDidMount() {
@@ -30,7 +32,11 @@ class Home extends Component {
     return (
       <div className="home">
         <Header />
-        <BookCollection books={this.state.books} />
+        {this.state.isLoading ? (
+          <LoadingSpinner />
+        ) : (
+          <BookCollection books={this.state.books} />
+        )}
         <Footer />
       </div>
     );
