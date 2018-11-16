@@ -37,6 +37,13 @@ body {
   list-style-type: none;
 }
 
+/* gives nav items fixed, equal widths*/
+/* .nav-li {
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+} */
+
 .nav-li-link {
   margin: 0;
   padding: 0.5rem 1rem;
