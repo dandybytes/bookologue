@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import CardOverlay from "./CardOverlay";
+import "./BookCard.css";
 
 class BookCard extends Component {
   state = {

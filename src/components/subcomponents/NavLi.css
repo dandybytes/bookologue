@@ -1,0 +1,26 @@
+/* gives nav items fixed, equal widths*/
+/* .nav-li {
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+} */
+
+.nav-li-link {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: white;
+  opacity: 0.8;
+}
+
+.nav-li-link:hover {
+  background-color: rgba(50, 50, 50, 0.1);
+  opacity: 1;
+}
+
+.nav-li-link-active {
+  /* background-color: rgba(50, 50, 50, 0.2); */
+  opacity: 1;
+  font-weight: bold;
+  color: rgb(220, 220, 100);
+}

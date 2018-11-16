@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import BookCard from "./BookCard";
+import "./BookCollection.css";
 
 class BookCollection extends Component {
   state = {

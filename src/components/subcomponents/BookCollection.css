@@ -1,0 +1,10 @@
+.book-collection {
+  min-width: 15rem;
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+  /* border: 1px dashed #ccc; */
+  padding: 20px;
+}
