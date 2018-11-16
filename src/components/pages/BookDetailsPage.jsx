@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "../subcomponents/Header";
 import Footer from "../subcomponents/Footer";
 import LoadingSpinner from "../subcomponents/LoadingSpinner";
+import BookInfo from "../subcomponents/BookInfo";
 import "./BookDetailsPage.css";
 
 class BookDetailsPage extends Component {
@@ -27,7 +28,7 @@ class BookDetailsPage extends Component {
         {this.state.isLoading ? (
           <LoadingSpinner />
         ) : (
-          <p>showing details for book {this.props.id}</p>
+          <BookInfo book={this.state.book} />
         )}
         <Footer />
       </main>

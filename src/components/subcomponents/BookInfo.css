@@ -1,0 +1,32 @@
+.book-details-container {
+  display: flex;
+  justify-content: space-around;
+  min-width: 15rem;
+  width: 900px;
+  /* border: 1px dashed #ccc; */
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.book-details-visual {
+  width: 500px;
+  /* border: 1px dotted red; */
+  text-align: center;
+}
+
+.book-details-description {
+  width: 500px;
+  /* border: 1px dotted green; */
+  text-align: justify;
+  overflow: hidden;
+}
+
+.book-details-image {
+  width: 300px;
+  margin: auto;
+}
+
+.book-details-image img {
+  width: 100%;
+}

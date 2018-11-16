@@ -22,3 +22,17 @@ fetch(
 
 further reference:
     https://developers.google.com/books/docs/v1/using#auth
+
+
+
+
+test cases:
+http://localhost:3000/book/1cmF0twN4rIC  <-- long book description
+http://localhost:3000/book/KGt-FxUEj48C  <-- long book description
+http://localhost:3000/book/Ht3JDAAAQBAJ  <-- very long book description
+http://localhost:3000/book/G1y_5kpmatUC  <-- no description available
+http://localhost:3000/book/UooAblGoGN8C  <-- 3.5 stars
+http://localhost:3000/book/-dzJDAAAQBAJ  <-- 3.5 stars
+http://localhost:3000/book/YwEQoMAJjj8C  <-- retrieval by ID fails
+http://localhost:3000/book/GteVGSDixUUC  <-- retrieval by ID fails
+http://localhost:3000/book/sZYJ0zhgn-wC  <-- retrieval by ID fails
