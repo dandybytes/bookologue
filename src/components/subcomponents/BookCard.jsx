@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import CardOverlay from "./CardOverlay";
 
 class BookCard extends Component {
   state = {
@@ -6,16 +7,14 @@ class BookCard extends Component {
     title: "",
     authors: "",
     imageLink: "",
-    description: "",
-    opacity: 1
+    description: ""
   };
-  toggleOpacity = id => {
-    this.setState(prevState =>
-      prevState.opacity === 1 ? { opacity: 0.5 } : { opacity: 1 }
-    );
+  handleClick = () => {
+    this.props.toggleActive(this.state.id);
   };
   componentWillMount() {
     const id = this.props.id || +new Date();
+    const clicked = this.props.clicked;
     const title = this.props.bookInfo.title || "Book Title";
     const authors = this.props.bookInfo.authors || "author unknown";
     const imageLink =
@@ -31,17 +30,13 @@ class BookCard extends Component {
       }
       description += "...";
     }
-    this.setState({ id, title, authors, imageLink, description });
+    this.setState({ id, clicked, title, authors, imageLink, description });
   }
   render() {
     const { id, title, authors, description, imageLink } = this.state;
     return (
-      <div
-        className="book-card-wrapper"
-        style={{ opacity: this.state.opacity }}
-        onClick={() => this.toggleOpacity(this.state.id)}
-      >
-        <div className="book-card-overlay" />
+      <div className="book-card-wrapper" onClick={this.handleClick}>
+        {this.props.active && <CardOverlay id={id} />}
         <div className="book-card">
           <div className="book-card-image">
             <img src={imageLink} alt="book cover" />

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import BookCollection from "./BookCollection";
-import LoadingSpinner from "./LoadingSpinner";
+import Header from "../subcomponents/Header";
+import Footer from "../subcomponents/Footer";
+import BookCollection from "../subcomponents/BookCollection";
+import LoadingSpinner from "../subcomponents/LoadingSpinner";
 
-class Home extends Component {
+class BookListPage extends Component {
   state = {
     isLoading: true,
     books: [],
@@ -22,7 +22,7 @@ class Home extends Component {
       .then(res => this.setState({ books: res.items, isLoading: false }))
       .catch(e => console.error(e));
   };
-  componentDidMount() {
+  componentWillMount() {
     this.fetchData(this.props.keyword);
   }
   componentDidUpdate = (prevProps, prevState) =>
@@ -30,7 +30,7 @@ class Home extends Component {
     this.fetchData(this.props.keyword);
   render() {
     return (
-      <div className="home">
+      <main>
         <Header />
         {this.state.isLoading ? (
           <LoadingSpinner />
@@ -38,9 +38,9 @@ class Home extends Component {
           <BookCollection books={this.state.books} />
         )}
         <Footer />
-      </div>
+      </main>
     );
   }
 }
 
-export default Home;
+export default BookListPage;

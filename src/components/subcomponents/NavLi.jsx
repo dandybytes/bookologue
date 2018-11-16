@@ -5,7 +5,7 @@ const NavLi = ({ text }) => {
   return (
     <li className="nav-li">
       <NavLink
-        to={`/${text}`}
+        to={`/books/${text}`}
         className="nav-li-link"
         activeClassName="nav-li-link-active"
       >
